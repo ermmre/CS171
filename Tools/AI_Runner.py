@@ -121,4 +121,5 @@ if __name__ == "__main__":
 
     elif mode == 'l':
         ai_path_1,ai_path_2 =  sys.argv[5],sys.argv[6]
-        main.Run(mode=mode,ai_path_1=ai_path_1,ai_path_2=ai_path_2,time=1200)
+        with open('test_out.txt', 'a') as test_file:
+            main.Run(fh=test_file,mode=mode,ai_path_1=ai_path_1,ai_path_2=ai_path_2,time=1200)
